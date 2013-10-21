@@ -14,7 +14,7 @@ class Postgis15 < Formula
 
   def install
     ENV.deparallelize
-    postgresql = Formula.factory 'postgresql9'
+    postgresql = Formula.factory 'postgresql-9.1'
 
     args = [
       "--disable-dependency-tracking",
@@ -82,7 +82,7 @@ class Postgis15 < Formula
   end
 
   def caveats;
-    postgresql = Formula.factory 'postgresql9'
+    postgresql = Formula.factory 'postgresql-9.1'
 
     <<-EOS.undent
       To create a spatially-enabled database, see the documentation:
